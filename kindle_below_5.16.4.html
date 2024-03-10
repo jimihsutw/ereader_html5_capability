@@ -1,0 +1,3920 @@
+<html lang="en"><head>
+		<title>HTML5test - How well does your browser support HTML5?</title>
+
+		<meta charset="UTF-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://html5test.opensuse.org/css/main.css" type="text/css">
+
+		<script src="https://html5test.opensuse.org/scripts/base.js" type="text/javascript"></script>
+		<script src="https://html5test.opensuse.org/scripts/9/engine.js" type="text/javascript"></script>
+		<script src="/scripts/9/data.js" type="text/javascript"></script>
+
+		<!-- <script>
+			(function(){var p=[],w=window,d=document,e=f=0;p.push('ua='+encodeURIComponent(navigator.userAgent));e|=w.ActiveXObject?1:0;e|=w.opera?2:0;e|=w.chrome?4:0;
+			e|='getBoxObjectFor' in d || 'mozInnerScreenX' in w?8:0;e|=('WebKitCSSMatrix' in w||'WebKitPoint' in w||'webkitStorageInfo' in w||'webkitURL' in w)?16:0;
+			e|=(e&16&&({}.toString).toString().indexOf("\n")===-1)?32:0;p.push('e='+e);f|='sandbox' in d.createElement('iframe')?1:0;f|='WebSocket' in w?2:0;
+			f|=w.Worker?4:0;f|=w.applicationCache?8:0;f|=w.history && history.pushState?16:0;f|=d.documentElement.webkitRequestFullScreen?32:0;f|='FileReader' in w?64:0;
+			p.push('f='+f);p.push('r='+Math.random().toString(36).substring(7));p.push('w='+screen.width);p.push('h='+screen.height);
+			var s=d.createElement('script');
+			s.src='//api.whichbrowser.net/rel/detect.js?' + p.join('&');d.getElementsByTagName('head')[0].appendChild(s); })();
+		</script> -->
+
+		<meta name="application-name" content="HTML5test">
+	</head>
+
+
+<!--
+	Copyright (c) 2010-2016 Niels Leenheer
+
+	Permission is hereby granted, free of charge, to any person obtaining
+	a copy of this software and associated documentation files (the
+	"Software"), to deal in the Software without restriction, including
+	without limitation the rights to use, copy, modify, merge, publish,
+	distribute, sublicense, and/or sell copies of the Software, and to
+	permit persons to whom the Software is furnished to do so, subject to
+	the following conditions:
+
+	The above copyright notice and this permission notice shall be
+	included in all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+	EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+	NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+	LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+	OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+	WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+
+	<body class="">
+		<div id="fb-root"></div>
+		<div id="contentwrapper">
+
+			<div class="page">
+				<div id="loading" style="display: none;"><div></div></div>
+
+				<div id="warning"></div>
+
+				<div id="contents" class="column" style="visibility: visible;">
+				<div id="score">
+				   <div class="pointsPanel">
+					  <h2><span>Your browser scores</span> <strong>162</strong> <span>out of 571 points</span></h2>
+				   </div>
+				</div>
+				<div id="results">
+				   <div class="resultsTable detailsTable">
+					  <div class="left">
+						 <div>
+							<div class="category semantics" id="category-semantics">
+							   <h2>Semantics</h2>
+							   <table cellspacing="0" id="table-parsing">
+								  <thead>
+									 <tr id="head-parsing">
+										<th colspan="2">
+										   Parsing rules
+										   <div>
+											  <div class="grade"><span class="great">5</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-parsing.doctype">
+										<th class="hasLink">
+										   <div><span><code>&lt;!DOCTYPE html&gt;</code> triggers standards mode</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-parsing.tokenizer">
+										<th class="hasLink">
+										   <div><span>HTML5 tokenizer</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-parsing.tree">
+										<th class="hasLink">
+										   <div><span>HTML5 tree building</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><em>HTML5 defines rules for embedding SVG and MathML inside a regular HTML document. The following tests only check if the browser is following the HTML5 parsing rules for inline SVG and MathML, not if the browser can actually understand and render it.</em></th>
+									 </tr>
+									 <tr id="row-parsing.svg">
+										<th class="hasLink">
+										   <div><span>Parsing inline SVG</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-parsing.mathml">
+										<th class="hasLink">
+										   <div><span>Parsing inline MathML</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-elements">
+								  <thead>
+									 <tr id="head-elements">
+										<th colspan="2">
+										   Elements
+										   <div>
+											  <div class="grade"><span class="good">6/30</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-elements.dataset">
+										<th class="hasLink">
+										   <div><span>Embedding custom non-visible data</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>New or modified elements</strong></th>
+									 </tr>
+									 <tr id="row-elements.section" class="hasChild hidden">
+										<th>
+										   <div><span>Section elements</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.section.section" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>section</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.section.nav" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>nav</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.section.article" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>article</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.section.aside" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>aside</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.section.header" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>header</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.section.footer" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>footer</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.grouping" class="hasChild hidden">
+										<th>
+										   <div><span>Grouping content elements</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.grouping.main" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>main</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.grouping.figure" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>figure</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.grouping.figcaption" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>figcaption</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.grouping.ol" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>reversed</code> attribute on the <code>ol</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.semantic" class="hasChild hidden">
+										<th>
+										   <div><span>Text-level semantic elements</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.semantic.download" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>download</code> attribute on the <code>a</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.semantic.ping" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>ping</code> attribute on the <code>a</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.semantic.mark" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>mark</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.semantic.ruby" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>ruby</code>, <code>rt</code> and <code>rp</code> elements</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.semantic.time" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>time</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.semantic.data" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>data</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.semantic.wbr" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>wbr</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.interactive" class="hasChild">
+										<th>
+										   <div><span>Interactive elements</span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.interactive.details" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>details</code> element</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.interactive.summary" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>summary</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.interactive.menutoolbar" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>menu</code> element of type <code>toolbar</code></span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.interactive.menucontext" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>menu</code> element of type <code>context</code></span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.interactive.dialog" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>dialog</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Global attributes or methods</strong></th>
+									 </tr>
+									 <tr id="row-elements.hidden">
+										<th class="hasLink">
+										   <div><span><code>hidden</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.dynamic" class="hasChild hidden">
+										<th>
+										   <div><span>Dynamic markup insertion</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.dynamic.outerHTML" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>outerHTML</code> property</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-elements.dynamic.insertAdjacentHTML" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>insertAdjacentHTML</code> function</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-form">
+								  <thead>
+									 <tr id="head-form">
+										<th colspan="2">
+										   Forms
+										   <div>
+											  <div class="grade"><span class="great">45/65</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr>
+										<th colspan="2" class="details"><strong>Field types</strong></th>
+									 </tr>
+									 <tr id="row-form.text" class="hasChild">
+										<th>
+										   <div><span><code>input type=text</code></span></div>
+										</th>
+										<td>
+										   <div>Partial <span class="check">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.text.element" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.text.selection" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Selection Direction</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.search" class="hasChild hidden">
+										<th>
+										   <div><span><code>input type=search</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.search.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.tel" class="hasChild hidden">
+										<th>
+										   <div><span><code>input type=tel</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.tel.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.url" class="hasChild hidden">
+										<th>
+										   <div><span><code>input type=url</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.url.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.url.validation" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Field validation</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.email" class="hasChild hidden">
+										<th>
+										   <div><span><code>input type=email</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.email.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.email.validation" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Field validation</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.date" class="hasChild">
+										<th>
+										   <div><span><code>input type=date</code></span></div>
+										</th>
+										<td>
+										    <div>Partial <span class="check">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.date.element" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.date.ui" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Custom user-interface</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.date.sanitization" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Value sanitization</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.date.min" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>min</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.date.max" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>max</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.date.step" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>step</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.date.stepDown" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>stepDown()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.date.stepUp" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>stepUp()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.date.valueAsDate" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>valueAsDate()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.date.valueAsNumber" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>valueAsNumber()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.month" class="hasChild none">
+										<th>
+										   <div><span><code>input type=month</code></span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.month.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.month.ui" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Custom user-interface</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.month.sanitization" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Value sanitization</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.month.min" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>min</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.month.max" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>max</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.month.step" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>step</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.month.stepDown" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>stepDown()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.month.stepUp" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>stepUp()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.month.valueAsDate" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>valueAsDate()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.month.valueAsNumber" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>valueAsNumber()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.week" class="hasChild hidden">
+										<th>
+										   <div><span><code>input type=week</code></span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.week.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.week.ui" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Custom user-interface</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.week.sanitization" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Value sanitization</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.week.min" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>min</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.week.max" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>max</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.week.step" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>step</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.week.stepDown" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>stepDown()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.week.stepUp" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>stepUp()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.week.valueAsDate" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>valueAsDate()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.week.valueAsNumber" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>valueAsNumber()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.time" class="hasChild hidden">
+										<th>
+										   <div><span><code>input type=time</code></span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.time.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.time.ui" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Custom user-interface</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.time.sanitization" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Value sanitization</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.time.min" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>min</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.time.max" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>max</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.time.step" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>step</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.time.stepDown" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>stepDown()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.time.stepUp" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>stepUp()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.time.valueAsDate" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>valueAsDate()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.time.valueAsNumber" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>valueAsNumber()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datetime-local" class="hasChild hidden">
+										<th>
+										   <div><span><code>input type=datetime-local</code></span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datetime-local.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datetime-local.ui" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Custom user-interface</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datetime-local.sanitization" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Value sanitization</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datetime-local.min" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>min</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datetime-local.max" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>max</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datetime-local.step" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>step</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datetime-local.stepDown" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>stepDown()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datetime-local.stepUp" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>stepUp()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datetime-local.valueAsNumber" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>valueAsNumber()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.number" class="hasChild hidden">
+										<th>
+										   <div><span><code>input type=number</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.number.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.number.ui" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Custom user-interface</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.number.sanitization" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Value sanitization</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.number.validation" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Field validation</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.number.min" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>min</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.number.max" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>max</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.number.step" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>step</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.number.stepDown" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>stepDown()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.number.stepUp" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>stepUp()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.number.valueAsNumber" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>valueAsNumber()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.range" class="hasChild hidden">
+										<th>
+										   <div><span><code>input type=range</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.range.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.range.ui" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Custom user-interface</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.range.sanitization" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Value sanitization</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.range.min" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>min</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.range.max" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>max</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.range.step" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>step</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.range.stepDown" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>stepDown()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.range.stepUp" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>stepUp()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.range.valueAsNumber" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>valueAsNumber()</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.color" class="hasChild">
+										<th>
+										   <div><span><code>input type=color</code></span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.color.element" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.color.ui" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Custom user-interface</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.color.sanitization" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Value sanitization</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.checkbox" class="hasChild hidden">
+										<th>
+										   <div><span><code>input type=checkbox</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.checkbox.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.checkbox.indeterminate" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>indeterminate</code> property</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.image" class="hasChild">
+										<th>
+										   <div><span><code>input type=image</code></span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.image.element" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.image.width" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>width</code> property</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.image.height" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>height</code> property</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.file" class="hasChild">
+										<th>
+										   <div><span><code>input type=file</code></span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.file.element" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.file.files" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>files</code> property</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.file.directory" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Directory upload support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.textarea" class="hasChild">
+										<th>
+										   <div><span><code>textarea</code></span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.textarea.element" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.textarea.maxlength" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>maxlength</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.textarea.wrap" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>wrap</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.select" class="hasChild hidden">
+										<th>
+										   <div><span><code>select</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.select.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.select.required" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>required</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.fieldset" class="hasChild">
+										<th>
+										   <div><span><code>fieldset</code></span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.fieldset.element" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.fieldset.elements" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>elements</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.fieldset.disabled" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>disabled</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datalist" class="hasChild">
+										<th>
+										   <div><span><code>datalist</code></span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datalist.element" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.datalist.list" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>list</code> attribute for fields</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.output" class="hasChild hidden">
+										<th>
+										   <div><span><code>output</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.output.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.progress" class="hasChild hidden">
+										<th>
+										   <div><span><code>progress</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.progress.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.meter" class="hasChild hidden">
+										<th>
+										   <div><span><code>meter</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.meter.element" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Minimal element support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Fields</strong></th>
+									 </tr>
+									 <tr id="row-form.validation" class="hasChild hidden">
+										<th>
+										   <div><span>Field validation</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.validation.pattern" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>pattern</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.validation.required" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>required</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.association" class="hasChild hidden">
+										<th>
+										   <div><span>Association of controls and forms</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.association.control" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>control</code> property on labels</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.association.form" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>form</code> property on fields</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.association.formAction" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>formAction</code> property on fields</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.association.formEnctype" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>formEnctype</code> property on fields</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.association.formMethod" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>formMethod</code> property on fields</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.association.formNoValidate" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>formNoValidate</code> property on fields</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.association.formTarget" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>formTarget</code> property on fields</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.association.labels" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>labels</code> property on fields</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.other" class="hasChild">
+										<th>
+										   <div><span>Other attributes</span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.other.autofocus" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>autofocus</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.other.autocomplete" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>autocomplete</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.other.placeholder" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>placeholder</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.other.multiple" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>multiple</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.other.dirname" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>dirname</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.selectors" class="hasChild hidden">
+										<th>
+										   <div><span>CSS selectors</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.selectors.valid" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>:valid</code> selector</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.selectors.invalid" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>:invalid</code> selector</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.selectors.optional" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>:optional</code> selector</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.selectors.required" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>:required</code> selector</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.selectors.in-range" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>:in-range</code> selector</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.selectors.out-of-range" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>:out-of-range</code> selector</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.selectors.read-write" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>:read-write</code> selector</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.selectors.read-only" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>:read-only</code> selector</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.events" class="hasChild hidden">
+										<th>
+										   <div><span>Events</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.events.oninput" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>oninput</code> event</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.events.onchange" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>onchange</code> event</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.events.oninvalid" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>oninvalid</code> event</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Forms</strong></th>
+									 </tr>
+									 <tr id="row-form.formvalidation" class="hasChild hidden">
+										<th>
+										   <div><span>Form validation</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.formvalidation.checkValidity" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>checkValidity</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-form.formvalidation.noValidate" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>noValidate</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-components">
+								  <thead>
+									 <tr id="head-components">
+										<th colspan="2">
+										   Web Components
+										   <div>
+											  <div class="grade"><span class="great">0/10</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-components.custom">
+										<th class="hasLink">
+										   <div><span>Custom elements</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-components.shadowdom">
+										<th class="hasLink">
+										   <div><span>Shadow DOM</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-components.template">
+										<th class="hasLink">
+										   <div><span>HTML templates</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-components.imports">
+										<th class="hasLink">
+										   <div><span>HTML imports</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							</div>
+							<div class="category deviceaccess" id="category-deviceaccess">
+							   <h2>Device Access</h2>
+							   <table cellspacing="0" id="table-location">
+								  <thead>
+									 <tr id="head-location">
+										<th colspan="2">
+										   Location and Orientation
+										   <div>
+											  <div class="grade"><span class="great">0/20</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-location.geolocation">
+										<th class="hasLink">
+										   <div><span>Geolocation</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-location.orientation">
+										<th class="hasLink">
+										   <div><span>Device Orientation</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-location.motion">
+										<th class="hasLink">
+										   <div><span>Device Motion</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-output">
+								  <thead>
+									 <tr id="head-output">
+										<th colspan="2">
+										   Output
+										   <div>
+											  <div class="grade"><span class="great">3/10</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-output.requestFullScreen">
+										<th class="hasLink">
+										   <div><span>Full screen support</span></div>
+										</th>
+										<td>
+										   <div>Prefixed <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-output.notifications">
+										<th class="hasLink">
+										   <div><span>Web Notifications</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-input">
+								  <thead>
+									 <tr id="head-input">
+										<th colspan="2">
+										   Input
+										   <div>
+											  <div class="grade"><span class="great">0/10</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-input.getGamepads">
+										<th class="hasLink">
+										   <div><span>Gamepad control</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-input.pointerevents">
+										<th class="hasLink">
+										   <div><span>Pointer Events</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-input.pointerLock">
+										<th class="hasLink">
+										   <div><span>Pointer Lock support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							</div>
+							<div class="category connectivity" id="category-connectivity">
+							   <h2>Connectivity</h2>
+							   <table cellspacing="0" id="table-communication">
+								  <thead>
+									 <tr id="head-communication">
+										<th colspan="2">
+										   Communication
+										   <div>
+											  <div class="grade"><span class="good">10/40</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-communication.eventSource">
+										<th class="hasLink">
+										   <div><span>Server-Sent Events</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-communication.beacon">
+										<th class="hasLink">
+										   <div><span>Beacon</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-communication.fetch">
+										<th class="hasLink">
+										   <div><span>Fetch</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>XMLHttpRequest Level 2</strong></th>
+									 </tr>
+									 <tr id="row-communication.xmlhttprequest2.upload">
+										<th class="hasLink">
+										   <div><span>Upload files</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-communication.xmlhttprequest2.response" class="hasChild hidden">
+										<th>
+										   <div><span>Response type support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-communication.xmlhttprequest2.response.text" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Text response type</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-communication.xmlhttprequest2.response.document" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>Document response type</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-communication.xmlhttprequest2.response.array" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>ArrayBuffer</code> response type</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-communication.xmlhttprequest2.response.blob" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>Blob</code> response type</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>WebSocket</strong></th>
+									 </tr>
+									 <tr id="row-communication.websocket.basic">
+										<th class="hasLink">
+										   <div><span>Basic socket communication</span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-communication.websocket.binary">
+										<th class="hasLink">
+										   <div><span><code>ArrayBuffer</code> and <code>Blob</code> support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-streams">
+								  <thead>
+									 <tr id="head-streams">
+										<th colspan="2">
+										   Streams
+										   <div>
+											  <div class="grade"><span class="great">0/6</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-streams.readable">
+										<th class="hasLink">
+										   <div><span>Readable streams</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streams.writeable">
+										<th class="hasLink">
+										   <div><span>Writable streams</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-rtc">
+								  <thead>
+									 <tr id="head-rtc">
+										<th colspan="2">
+										   Peer To Peer
+										   <div>
+											  <div class="grade"><span class="great">0/45</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr>
+										<th colspan="2" class="details"><strong>Connectivity</strong></th>
+									 </tr>
+									 <tr id="row-rtc.webrtc">
+										<th class="hasLink">
+										   <div><span>WebRTC 1.0</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-rtc.objectrtc">
+										<th class="hasLink">
+										   <div><span>ObjectRTC API for WebRTC</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-rtc.datachannel">
+										<th class="hasLink">
+										   <div><span>Data channel</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Input</strong></th>
+									 </tr>
+									 <tr id="row-media.getUserMedia">
+										<th class="hasLink">
+										   <div><span>Access the webcam</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-media.getDisplayMedia">
+										<th class="hasLink">
+										   <div><span>Screen Capture</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-media.enumerateDevices">
+										<th class="hasLink">
+										   <div><span>Enumerate devices</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Recording</strong></th>
+									 </tr>
+									 <tr id="row-rtc.recorder">
+										<th class="hasLink">
+										   <div><span>Media Stream recorder</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							</div>
+							<div class="category performanceintegration" id="category-performanceintegration">
+							   <h2>Performance &amp; Integration</h2>
+							   <table cellspacing="0" id="table-interaction">
+								  <thead>
+									 <tr id="head-interaction">
+										<th colspan="2">
+										   User interaction
+										   <div>
+											  <div class="grade"><span class="great">12/19</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr>
+										<th colspan="2" class="details"><strong>Drag and drop</strong></th>
+									 </tr>
+									 <tr id="row-interaction.dragdrop.attributes" class="hasChild">
+										<th>
+										   <div><span>Attributes</span></div>
+										</th>
+										<td>
+										   <div><span class="partially">Partial</span> <span class="partial">○</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.dragdrop.attributes.draggable" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>draggable</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.dragdrop.attributes.dropzone" class="isChild" style="display: table-row;">
+										<th class="hasLink">
+										   <div><span><code>dropzone</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.dragdrop.events" class="hasChild hidden">
+										<th>
+										   <div><span>Events</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.dragdrop.events.ondrag" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>ondrag</code> event</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.dragdrop.events.ondragstart" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>ondragstart</code> event</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.dragdrop.events.ondragenter" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>ondragenter</code> event</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.dragdrop.events.ondragover" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>ondragover</code> event</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.dragdrop.events.ondragleave" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>ondragleave</code> event</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.dragdrop.events.ondragend" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>ondragend</code> event</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.dragdrop.events.ondrop" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>ondrop</code> event</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>HTML editing</strong></th>
+									 </tr>
+									 <tr id="row-interaction.editing.elements" class="hasChild hidden">
+										<th>
+										   <div><span>Editing elements</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.elements.contentEditable" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>contentEditable</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.elements.isContentEditable" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>isContentEditable</code> property</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.documents" class="hasChild hidden">
+										<th>
+										   <div><span>Editing documents</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.documents.designMode" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>designMode</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.selectors" class="hasChild hidden">
+										<th>
+										   <div><span>CSS selectors</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.selectors.read-write" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>:read-write</code> selector</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.selectors.read-only" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>:read-only</code> selector</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.apis" class="hasChild hidden">
+										<th>
+										   <div><span>APIs</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.apis.execCommand" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>execCommand</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.apis.queryCommandEnabled" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>queryCommandEnabled</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.apis.queryCommandIndeterm" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>queryCommandIndeterm</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.apis.queryCommandState" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>queryCommandState</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.apis.queryCommandSupported" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>queryCommandSupported</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-interaction.editing.apis.queryCommandValue" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span><code>queryCommandValue</code> method</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Clipboard</strong></th>
+									 </tr>
+									 <tr id="row-interaction.clipboard">
+										<th class="hasLink">
+										   <div><span>Clipboard API and events</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Spellcheck</strong></th>
+									 </tr>
+									 <tr id="row-interaction.spellcheck">
+										<th class="hasLink">
+										   <div><span><code>spellcheck</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-performance">
+								  <thead>
+									 <tr id="head-performance">
+										<th colspan="2">
+										   Performance
+										   <div>
+											  <div class="grade"><span class="great">10/12</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr>
+										<th colspan="2" class="details"><strong>Workers</strong></th>
+									 </tr>
+									 <tr id="row-performance.worker">
+										<th class="hasLink">
+										   <div><span>Web Workers</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-performance.sharedWorker">
+										<th class="hasLink">
+										   <div><span>Shared Workers</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Other</strong></th>
+									 </tr>
+									 <tr id="row-performance.requestIdleCallback">
+										<th class="hasLink">
+										   <div><span><code>window.requestIdleCallback</code></span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-resource">
+								  <thead>
+									 <tr id="head-resource">
+										<th colspan="2">
+										   Resource Loading
+										   <div>
+											  <div class="grade"><span class="great">0/8</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-resource.fontloader">
+										<th class="hasLink">
+										   <div><span>Font Loader API</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Resource hints</strong></th>
+									 </tr>
+									 <tr id="row-resource.dns-prefetch">
+										<th class="hasLink">
+										   <div><span><code>link rel=dns-prefetch</code></span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-resource.prefetch">
+										<th class="hasLink">
+										   <div><span><code>link rel=prefetch</code></span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-resource.preconnect">
+										<th class="hasLink">
+										   <div><span><code>link rel=preconnect</code></span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-resource.prerender">
+										<th class="hasLink">
+										   <div><span><code>link rel=prerender</code></span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-resource.preload">
+										<th class="hasLink">
+										   <div><span><code>link rel=preload</code></span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Measurement</strong></th>
+									 </tr>
+									 <tr id="row-resource.performance-timing">
+										<th class="hasLink">
+										   <div><span>Performance Timing</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-resource.performance-observer">
+										<th class="hasLink">
+										   <div><span>Performance Observer</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-security">
+								  <thead>
+									 <tr id="head-security">
+										<th colspan="2">
+										   Security
+										   <div>
+											  <div class="grade"><span class="good">10/32</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-security.crypto">
+										<th class="hasLink">
+										   <div><span>Web Cryptography API</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-security.csp10">
+										<th class="hasLink">
+										   <div><span>Content Security Policy 1</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-security.csp11">
+										<th class="hasLink">
+										   <div><span>Content Security Policy 2</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-security.cors">
+										<th class="hasLink">
+										   <div><span>Cross-Origin Resource Sharing</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-security.integrity">
+										<th class="hasLink">
+										   <div><span>Subresource Integrity</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-security.postMessage">
+										<th class="hasLink">
+										   <div><span>Cross-document messaging</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Authentication</strong></th>
+									 </tr>
+									 <tr id="row-security.authentication">
+										<th class="hasLink">
+										   <div><span>Web Authentication / FIDO 2</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-security.credential">
+										<th class="hasLink">
+										   <div><span>Credential Management</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Iframes</strong></th>
+									 </tr>
+									 <tr id="row-security.sandbox">
+										<th class="hasLink">
+										   <div><span>Sandboxed <code>iframe</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-security.srcdoc">
+										<th class="hasLink">
+										   <div><span><code>iframe</code> with inline contents</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-payments">
+								  <thead>
+									 <tr id="head-payments">
+										<th colspan="2">
+										   Payments
+										   <div>
+											  <div class="grade"><span class="great">0/5</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-payments.payments">
+										<th class="hasLink">
+										   <div><span>Web Payments</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							</div>
+						 </div>
+					  </div><div class="right">
+						 <div>
+							<div class="category multimedia" id="category-multimedia">
+							   <h2>Multimedia</h2>
+							   <table cellspacing="0" id="table-video">
+								  <thead>
+									 <tr id="head-video">
+										<th colspan="2">
+										   Video
+										   <div>
+											  <div class="grade"><span class="good">0/33</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-video.element">
+										<th class="hasLink">
+										   <div><span><code>video</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-video.subtitle">
+										<th class="hasLink">
+										   <div><span>Subtitles</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-video.audiotracks">
+										<th class="hasLink">
+										   <div><span>Audio track selection</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-video.videotracks">
+										<th class="hasLink">
+										   <div><span>Video track selection</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-video.poster">
+										<th class="hasLink">
+										   <div><span>Poster images</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-video.canplaytype">
+										<th class="hasLink">
+										   <div><span>Codec detection</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Video codecs</strong></th>
+									 </tr>
+									 <tr id="row-video.codecs.mp4.mpeg4">
+										<th class="hasLink">
+										   <div><span>MPEG-4 ASP support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-video.codecs.mp4.h264">
+										<th class="hasLink">
+										   <div><span>H.264 support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-video.codecs.mp4.h265">
+										<th class="hasLink">
+										   <div><span>H.265 support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-video.codecs.ogg.theora">
+										<th class="hasLink">
+										   <div><span>Ogg Theora support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-video.codecs.webm.vp8">
+										<th class="hasLink">
+										   <div><span>WebM with VP8 support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-video.codecs.webm.vp9">
+										<th class="hasLink">
+										   <div><span>WebM with VP9 support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-audio">
+								  <thead>
+									 <tr id="head-audio">
+										<th colspan="2">
+										   Audio
+										   <div>
+											  <div class="grade"><span class="great">0/30</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-audio.element">
+										<th class="hasLink">
+										   <div><span><code>audio</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-audio.loop">
+										<th class="hasLink">
+										   <div><span>Loop audio</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-audio.preload">
+										<th class="hasLink">
+										   <div><span>Preload in the background</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Advanced</strong></th>
+									 </tr>
+									 <tr id="row-audio.webaudio">
+										<th class="hasLink">
+										   <div><span>Web Audio API</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-audio.speechrecognition">
+										<th class="hasLink">
+										   <div><span>Speech Recognition</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-audio.speechsynthesis">
+										<th class="hasLink">
+										   <div><span>Speech Synthesis</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Audio codecs</strong></th>
+									 </tr>
+									 <tr id="row-audio.codecs.pcm">
+										<th class="hasLink">
+										   <div><span>PCM audio support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-audio.codecs.mp3">
+										<th class="hasLink">
+										   <div><span>MP3 support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-audio.codecs.mp4.aac">
+										<th class="hasLink">
+										   <div><span>AAC support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-audio.codecs.mp4.ac3">
+										<th class="hasLink">
+										   <div><span>Dolby Digital support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-audio.codecs.mp4.ec3">
+										<th class="hasLink">
+										   <div><span>Dolby Digital Plus support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-audio.codecs.ogg.vorbis">
+										<th class="hasLink">
+										   <div><span>Ogg Vorbis support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-audio.codecs.ogg.opus">
+										<th class="hasLink">
+										   <div><span>Ogg Opus support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-audio.codecs.webm.vorbis">
+										<th class="hasLink">
+										   <div><span>WebM with Vorbis support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-audio.codecs.webm.opus">
+										<th class="hasLink">
+										   <div><span>WebM with Opus support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-streaming">
+								  <thead>
+									 <tr id="head-streaming">
+										<th colspan="2">
+										   Streaming
+										   <div>
+											  <div class="grade"><span class="great">0/5</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-streaming.mediasource">
+										<th class="hasLink">
+										   <div><span>Media Source extensions</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.drm">
+										<th class="hasLink">
+										   <div><span>DRM support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Adaptive bit rate</strong></th>
+									 </tr>
+									 <tr id="row-streaming.type.dash">
+										<th class="hasLink">
+										   <div><span>Dynamic Adaptive Streaming / MPEG-DASH</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.type.hls">
+										<th class="hasLink">
+										   <div><span>HTTP Live Streaming / HLS</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Codecs</strong></th>
+									 </tr>
+									 <tr id="row-streaming.video.codecs" class="hasChild none">
+										<th>
+										   <div><span>Video codecs</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.video.codecs.mp4.h264" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>MP4 with H.264 support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.video.codecs.mp4.h265" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>MP4 with H.265 support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.video.codecs.ts.h264" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>TS with H.264 support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.video.codecs.ts.h265" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>TS with H.265 support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.video.codecs.webm.vp8" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>WebM with VP8 support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.video.codecs.webm.vp9" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>WebM with VP9 support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.audio.codecs" class="hasChild">
+										<th>
+										   <div><span>Audio codecs</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.audio.codecs.mp4.aac" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>MP4 with AAC support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.audio.codecs.mp4.ac3" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>MP4 with Dolby Digital support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.audio.codecs.mp4.ec3" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>MP4 with Dolby Digital Plus support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.audio.codecs.ts.aac" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>TS with AAC support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.audio.codecs.ts.ac3" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>TS with Dolby Digital support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.audio.codecs.ts.ec3" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>TS with Dolby Digital Plus support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.audio.codecs.webm.vorbis" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>WebM with Vorbis support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-streaming.audio.codecs.webm.opus" class="isChild" style="display: none;">
+										<th class="hasLink">
+										   <div><span>WebM with Opus support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							</div>
+							<div class="category graphicseffects" id="category-graphicseffects">
+							   <h2>3D, Graphics &amp; Effects</h2>
+							   <table cellspacing="0" id="table-responsive">
+								  <thead>
+									 <tr id="head-responsive">
+										<th colspan="2">
+										   Responsive images
+										   <div>
+											  <div class="grade"><span class="great">0/15</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-responsive.picture">
+										<th class="hasLink">
+										   <div><span><code>picture</code> element</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-responsive.srcset">
+										<th class="hasLink">
+										   <div><span><code>srcset</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-responsive.sizes">
+										<th class="hasLink">
+										   <div><span><code>sizes</code> attribute</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-svg">
+								  <thead>
+									 <tr id="head-svg">
+										<th colspan="2">
+										   Vector graphics
+										   <div>
+											  <div class="grade"><span class="great">3/4</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-svg.image">
+										<th class="hasLink">
+										   <div><span>SVG as an image</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-svg.inline">
+										<th class="hasLink">
+										   <div><span>SVG inline in the document</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Features</strong></th>
+									 </tr>
+									 <tr id="row-svg.foreignobject">
+										<th class="hasLink">
+										   <div><span>HTML in SVG using foreignObject</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-svg.filters">
+										<th class="hasLink">
+										   <div><span>SVG Filters</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-canvas">
+								  <thead>
+									 <tr id="head-canvas">
+										<th colspan="2">
+										   2D Graphics
+										   <div>
+											  <div class="grade"><span class="great">12/25</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-canvas.context">
+										<th class="hasLink">
+										   <div><span>Canvas 2D graphics</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Drawing primitives</strong></th>
+									 </tr>
+									 <tr id="row-canvas.text">
+										<th class="hasLink">
+										   <div><span>Text support</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-canvas.path">
+										<th class="hasLink">
+										   <div><span>Path support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-canvas.ellipse">
+										<th class="hasLink">
+										   <div><span>Ellipse support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-canvas.dashed">
+										<th class="hasLink">
+										   <div><span>Dashed line support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-canvas.focusring">
+										<th class="hasLink">
+										   <div><span>System focus ring support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Features</strong></th>
+									 </tr>
+									 <tr id="row-canvas.hittest">
+										<th class="hasLink">
+										   <div><span>Hit testing support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-canvas.blending">
+										<th class="hasLink">
+										   <div><span>Blending modes</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Image export formats</strong></th>
+									 </tr>
+									 <tr id="row-canvas.png">
+										<th class="hasLink">
+										   <div><span>PNG support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-canvas.jpeg">
+										<th class="hasLink">
+										   <div><span>JPEG support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-canvas.jpegxr">
+										<th class="hasLink">
+										   <div><span>JPEG-XR support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-canvas.webp">
+										<th class="hasLink">
+										   <div><span>WebP support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-3d">
+								  <thead>
+									 <tr id="head-3d">
+										<th colspan="2">
+										   3D and VR
+										   <div>
+											  <div class="grade"><span class="good">0/23</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr>
+										<th colspan="2" class="details"><strong>3D Graphics</strong></th>
+									 </tr>
+									 <tr id="row-3d.webgl">
+										<th class="hasLink">
+										   <div><span>WebGL</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-3d.webgl2">
+										<th class="hasLink">
+										   <div><span>WebGL 2</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-3d.webgpu">
+										<th class="hasLink">
+										   <div><span>WebGPU</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>VR Headset</strong></th>
+									 </tr>
+									 <tr id="row-3d.webvr">
+										<th class="hasLink">
+										   <div><span>WebVR</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-offscreen">
+								  <thead>
+									 <tr id="head-offscreen">
+										<th colspan="2">
+										   Offscreen
+										   <div>
+											  <div class="grade"><span class="great">0/3</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-offscreen.context">
+										<th class="hasLink">
+										   <div><span>Bitmap Renderer Context</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-offscreen.bitmap">
+										<th class="hasLink">
+										   <div><span>Bitmap Data</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Offscreen Canvas</strong></th>
+									 </tr>
+									 <tr id="row-offscreen.canvas">
+										<th class="hasLink">
+										   <div><span>Offscreen Canvas API</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-offscreen.2d">
+										<th class="hasLink">
+										   <div><span>2D support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-offscreen.webgl">
+										<th class="hasLink">
+										   <div><span>3D support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-animation">
+								  <thead>
+									 <tr id="head-animation">
+										<th colspan="2">
+										   Animation
+										   <div>
+											  <div class="grade"><span class="great">0/8</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-animation.webanimation">
+										<th class="hasLink">
+										   <div><span>Web Animations API</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-animation.requestAnimationFrame">
+										<th class="hasLink">
+										   <div><span><code>window.requestAnimationFrame</code></span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							</div>
+							<div class="category offlinestorage" id="category-offlinestorage">
+							   <h2>Offline &amp; Storage</h2>
+							   <table cellspacing="0" id="table-offline">
+								  <thead>
+									 <tr id="head-offline">
+										<th colspan="2">
+										   Web applications
+										   <div>
+											  <div class="grade"><span class="good">3/17</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr>
+										<th colspan="2" class="details"><strong>Offline resources</strong></th>
+									 </tr>
+									 <tr id="row-offline.applicationCache">
+										<th class="hasLink">
+										   <div><span>Application Cache</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-offline.serviceWorkers">
+										<th class="hasLink">
+										   <div><span>Service Workers</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-offline.pushMessages">
+										<th class="hasLink">
+										   <div><span>Push Messages</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Content and Scheme handlers</strong></th>
+									 </tr>
+									 <tr id="row-offline.registerProtocolHandler">
+										<th class="hasLink">
+										   <div><span>Custom scheme handlers</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-offline.registerContentHandler">
+										<th class="hasLink">
+										   <div><span>Custom content handlers</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-storage">
+								  <thead>
+									 <tr id="head-storage">
+										<th colspan="2">
+										   Storage
+										   <div>
+											  <div class="grade"><span class="great">15/35</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr>
+										<th colspan="2" class="details"><strong>Key-value storage</strong></th>
+									 </tr>
+									 <tr id="row-storage.sessionStorage">
+										<th class="hasLink">
+										   <div><span>Session Storage</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-storage.localStorage">
+										<th class="hasLink">
+										   <div><span>Local Storage</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Database storage</strong></th>
+									 </tr>
+									 <tr id="row-storage.indexedDB.basic">
+										<th class="hasLink">
+										   <div><span>IndexedDB</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-storage.indexedDB.blob">
+										<th class="hasLink">
+										   <div><span>Objectstore <code>Blob</code> support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-storage.indexedDB.arraybuffer">
+										<th class="hasLink">
+										   <div><span>Objectstore <code>ArrayBuffer</code> support</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><em>The Web SQL Database specification is no longer being updated and has been replaced by IndexedDB. Because at least 3 vendors have shipped implementations of this specification we still include it in this test.</em></th>
+									 </tr>
+									 <tr id="row-storage.sqlDatabase">
+										<th class="hasLink">
+										   <div><span>Web SQL Database</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-files">
+								  <thead>
+									 <tr id="head-files">
+										<th colspan="2">
+										   Files
+										   <div>
+											  <div class="grade"><span class="great">13/15</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr>
+										<th colspan="2" class="details"><strong>Reading files</strong></th>
+									 </tr>
+									 <tr id="row-files.fileReader">
+										<th class="hasLink">
+										   <div><span>Basic support for reading files</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-files.fileReader.blob">
+										<th class="hasLink">
+										   <div><span>Create a <code>Blob</code> from a file</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-files.fileReader.dataURL">
+										<th class="hasLink">
+										   <div><span>Create a Data URL from a <code>Blob</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-files.fileReader.arraybuffer">
+										<th class="hasLink">
+										   <div><span>Create an <code>ArrayBuffer</code> from a <code>Blob</code></span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-files.fileReader.objectURL">
+										<th class="hasLink">
+										   <div><span>Create a Blob URL from a <code>Blob</code></span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Accessing the file system</strong></th>
+									 </tr>
+									 <tr id="row-files.getFileSystem">
+										<th class="hasLink">
+										   <div><span>FileSystem API</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><em>The Directories and System API proposal has failed to gain traction among browser vendors and is only supported in some Webkit based browsers. No additional points are awarded for supporting this API.</em></th>
+									 </tr>
+									 <tr id="row-files.fileSystem">
+										<th class="hasLink">
+										   <div><span>File API: Directories and System</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							</div>
+							<div class="category other" id="category-other">
+							   <h2>Other</h2>
+							   <table cellspacing="0" id="table-scripting">
+								  <thead>
+									 <tr id="head-scripting">
+										<th colspan="2">
+										   Scripting
+										   <div>
+											  <div class="grade"><span class="good">8/32</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr>
+										<th colspan="2" class="details"><strong>Script execution</strong></th>
+									 </tr>
+									 <tr id="row-scripting.async">
+										<th class="hasLink">
+										   <div><span>Asynchronous script execution</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.defer">
+										<th class="hasLink">
+										   <div><span>Defered script execution</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.executionevents">
+										<th class="hasLink">
+										   <div><span>Script execution events</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.onerror">
+										<th class="hasLink">
+										   <div><span>Runtime script error reporting</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>ECMAScript 5</strong></th>
+									 </tr>
+									 <tr id="row-scripting.es5.json">
+										<th class="hasLink">
+										   <div><span>JSON encoding and decoding</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>ECMAScript 6</strong></th>
+									 </tr>
+									 <tr id="row-scripting.es6.modules">
+										<th class="hasLink">
+										   <div><span>Modules</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.es6.class">
+										<th class="hasLink">
+										   <div><span>Classes</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.es6.arrow">
+										<th class="hasLink">
+										   <div><span>Arrow functions</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.es6.promises">
+										<th class="hasLink">
+										   <div><span>Promises</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.es6.template">
+										<th class="hasLink">
+										   <div><span>Template strings</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.es6.datatypes">
+										<th class="hasLink">
+										   <div><span>Typed arrays</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.es6.i18n">
+										<th class="hasLink">
+										   <div><span>Internationalization</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>ECMAScript 7</strong></th>
+									 </tr>
+									 <tr id="row-scripting.es7.async">
+										<th class="hasLink">
+										   <div><span>Async and Await</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr>
+										<th colspan="2" class="details"><strong>Other API's</strong></th>
+									 </tr>
+									 <tr id="row-scripting.base64">
+										<th class="hasLink">
+										   <div><span>Base64 encoding and decoding</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.mutationObserver">
+										<th class="hasLink">
+										   <div><span>Mutation Observer</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.intersectionObserver">
+										<th class="hasLink">
+										   <div><span>Intersection Observer</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.resizeObserver">
+										<th class="hasLink">
+										   <div><span>Resize Observer</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.url">
+										<th class="hasLink">
+										   <div><span>URL API</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-scripting.encoding">
+										<th class="hasLink">
+										   <div><span>Encoding API</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							   <table cellspacing="0" id="table-other">
+								  <thead>
+									 <tr id="head-other">
+										<th colspan="2">
+										   Other
+										   <div>
+											  <div class="grade"><span class="great">7/9</span></div>
+										   </div>
+										</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									 <tr id="row-other.history">
+										<th class="hasLink">
+										   <div><span>Session history</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-other.pagevisiblity">
+										<th class="hasLink">
+										   <div><span>Page Visibility</span></div>
+										</th>
+										<td>
+										   <div>No <span class="ballot">✘</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-other.getSelection">
+										<th class="hasLink">
+										   <div><span>Text selection</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+									 <tr id="row-other.scrollIntoView">
+										<th class="hasLink">
+										   <div><span>Scroll into view</span></div>
+										</th>
+										<td>
+										   <div>Yes <span class="check">✔</span></div>
+										</td>
+									 </tr>
+								  </tbody>
+							   </table>
+							</div>
+						 </div>
+					  </div>
+				   </div>
+				</div>
+
+					<div class="footer">
+						<div>
+							<div class="copyright">
+								<p>
+									June 2016 - version 8.0. Created by Niels Leenheer.<br>
+									Please note that the HTML5 test is not affiliated with the W3C or the HTML5 working group.<br>
+								</p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="index"><div id="indexmenu"><ul><li class="category semantics"><a href="#category-semantics">Semantics</a><ul><li><a href="#table-parsing">Parsing rules</a></li><li><a href="#table-elements">Elements</a></li><li><a href="#table-form">Forms</a></li><li><a href="#table-components">Web Components</a></li></ul></li><li class="category deviceaccess"><a href="#category-deviceaccess">Device Access</a><ul><li><a href="#table-location">Location and Orientation</a></li><li><a href="#table-output">Output</a></li><li><a href="#table-input">Input</a></li></ul></li><li class="category multimedia"><a href="#category-multimedia">Multimedia</a><ul><li><a href="#table-video">Video</a></li><li><a href="#table-audio">Audio</a></li><li><a href="#table-streaming">Streaming</a></li></ul></li><li class="category graphicseffects"><a href="#category-graphicseffects">3D, Graphics &amp; Effects</a><ul><li><a href="#table-responsive">Responsive images</a></li><li><a href="#table-svg">Vector graphics</a></li><li><a href="#table-canvas">2D Graphics</a></li><li><a href="#table-3d">3D and VR</a></li><li><a href="#table-offscreen">Offscreen</a></li><li><a href="#table-animation">Animation</a></li></ul></li><li class="category connectivity"><a href="#category-connectivity">Connectivity</a><ul><li><a href="#table-communication">Communication</a></li><li><a href="#table-streams">Streams</a></li><li><a href="#table-rtc">Peer To Peer</a></li></ul></li><li class="category performanceintegration"><a href="#category-performanceintegration">Performance &amp; Integration</a><ul><li><a href="#table-interaction">User interaction</a></li><li><a href="#table-performance">Performance</a></li><li><a href="#table-resource">Resource Loading</a></li><li><a href="#table-security">Security</a></li><li><a href="#table-payments">Payments</a></li></ul></li><li class="category offlinestorage"><a href="#category-offlinestorage">Offline &amp; Storage</a><ul><li><a href="#table-offline">Web applications</a></li><li><a href="#table-storage">Storage</a></li><li><a href="#table-files">Files</a></li></ul></li><li class="category other"><a href="#category-other">Other</a><ul><li><a href="#table-scripting">Scripting</a></li><li><a href="#table-other">Other</a></li></ul></li></ul></div><button id="indexbutton"></button></div>
+
+		<script>
+			start();
+			function start() {
+				var params = {};
+
+				if (location.search) {
+					var parts = location.search.substring(1).split('&');
+
+					for (var i = 0; i < parts.length; i++) {
+						var nv = parts[i].split('=');
+						if (!nv[0]) continue;
+						params[nv[0]] = decodeURIComponent(nv[1]) || true;
+					}
+				}
+				var identifier = typeof params.identifier != 'undefined' ? params.identifier : '';
+				var source = typeof params.source != 'undefined' ? params.source : '';
+				var task = typeof params.task != 'undefined' ? params.task : '';
+				
+				new Test(function(r) {
+					var m = new Metadata(tests);
+
+					var c = new Calculate(r, m.data);
+
+					/* Update total score */
+					var container = document.getElementById('score');
+
+					container.innerHTML = tim(
+						"<div class='pointsPanel'>" +
+						"<h2><span>Your browser scores</span> <strong>{{score}}</strong> <span>out of {{maximum}} points</span></h2>" +
+						"</div>",
+					c);
+
+
+					// /* Show box for confirming useragent detection */
+					// new Confirm(container, {
+					// 	id:			r.uniqueid,
+					// 	onConfirm:	function() { submit('confirm', '{"uniqueid": "' + r.uniqueid + '"}'); },
+					// 	onReport:	function() { submit('report', '{"uniqueid": "' + r.uniqueid + '"}'); },
+					// 	onFeedback:	function(value) { submit('feedback', JSON.stringify({ uniqueid: r.uniqueid, value: value })); }
+					// });
+
+
+					if (location.protocol == "http:") {
+						var warning = document.createElement('div');
+						warning.className = 'upgradeWarning';
+						warning.innerHTML =
+							"<h4>Your browser may support even more features on a secure connection</h4>" +
+							"<p>Modern browsers only support some advanced features using on websites that uses a secure connection. " +
+							"This is because these features expose privacy sensitive data. Because you are now using an insecure connection, " +
+							"these features may not be available and are not detected.</p>" +
+							"<a href='https://html5test.opensuse.org/'>Try again, but using a secure connection</a>";
+
+						container.appendChild(warning);
+					}
+
+
+
+
+					/* Show detailed report of scores */
+					var container = document.getElementById('results');
+					var div = document.createElement('div');
+					div.className = 'resultsTable detailsTable';
+					container.appendChild(div);
+
+					var table = new ResultsTable({
+						parent:			div,
+						tests:			m.data,
+						header:			false,
+						links:			true,
+						explainations: 	true,
+						grading:		true,
+						bonus:			true,
+						distribute:		true,
+						columns:		1
+					});
+
+					table.updateColumn(0, { points: c.points, maximum: c.maximum, score: c.score, results: r.results });
+
+					new Index({
+						tests:			tests,
+						index:			document.getElementById('index'),
+						wrapper:		document.getElementById('contentwrapper')
+					});
+
+
+					window.setTimeout(function() {
+						var contents = document.getElementById('contents');
+						contents.style.visibility = 'visible';
+
+						var loading = document.getElementById('loading');
+						loading.style.display = 'none';
+					}, 100);
+				},
+
+				function(e) {
+					if (typeof console != 'undefined') console.log(e);
+
+					alert('Test has failed: ' + e.message);
+
+					var contents = document.getElementById('contents');
+					contents.style.visibility = 'visible';
+
+					var loading = document.getElementById('loading');
+					loading.style.display = 'none';
+				});
+			}
+		</script><script src="data:text/javascript;charset=utf-8,window"></script>
+		<script type="module" src="https://html5test.opensuse.org/assets/modules.js"></script>
+	
+</body></html>
